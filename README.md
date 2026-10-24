@@ -37,6 +37,8 @@ echo -n "lambobytelotushotel@gmail.com" | sha256sum
 
 ![Comando de hashing SHA-256 no terminal](screenshots/03-hash-sha256.png)
 
+**Por que SHA-256?** A consulta com o hash MD5 não funcionou: o Gravatar deixou de aceitar MD5 como identificador do e-mail e passou a usar SHA-256. Por isso a busca do perfil foi feita com o hash SHA-256.
+
 O argumento `-n` evita a quebra de linha adicionada por padrão pelo `echo`; essa diferença altera o hash. **Hash não é criptografia reversível**: aqui ele foi utilizado como identificador para consulta.
 
 > **Nota de conferência:** os hashes capturados nos prints podem não corresponder exatamente ao endereço acima. Antes de reutilizar um resultado, compare a entrada digitada com o e-mail da imagem original. Para referência, o MD5 do e-mail digitado acima é `d4a5fc5d3128890778667e24617d7cc0` e o SHA-256 é `d43faafe9d7f056793bd037b8d6e321acad985c222d83775b10d6539e301e931`.
